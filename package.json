@@ -1,0 +1,59 @@
+{
+  "_doc": [
+    "1. Relative path: package.json",
+    "2. Description: Manifest for SwISD-Network — the swarm brain library (network, crdt, peer, ownership, executor, tasks, admin).",
+    "3. Expects: Node 22+ runtime, strict ESM, and the swisd-core runtime library.",
+    "4. Provides: Entrypoints, build scripts, and dependency resolution for the swarm layer.",
+    "5. SPDX-License-Identifier: MPL-2.0",
+    "6. Copyright (c) 2026 Homahuki GmbH"
+  ],
+  "name": "swisd-network",
+  "version": "0.1.0",
+  "description": "SwISD Network — swarm brain: libp2p networking, CRDTs, peer trust, ownership, task routing, admin API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./admin": "./dist/admin/index.js",
+    "./crdt": "./dist/crdt/index.js",
+    "./executor": "./dist/executor/index.js",
+    "./models": "./dist/models/index.js",
+    "./network": "./dist/network/index.js",
+    "./ownership": "./dist/ownership/index.js",
+    "./peer": "./dist/peer/index.js",
+    "./tasks": "./dist/tasks/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swisd-project/SwISD-network.git"
+  },
+  "author": "Hidéo Snes, Homahuki GmbH, 2026",
+  "license": "MPL-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-noise": "17.0.0",
+    "@chainsafe/libp2p-yamux": "8.0.1",
+    "@libp2p/gossipsub": "17.0.1",
+    "@libp2p/interface": "^3.3.0",
+    "@libp2p/mdns": "12.0.30",
+    "@libp2p/ping": "^3.1.12",
+    "@libp2p/peer-id": "^6.0.15",
+    "@libp2p/tcp": "11.0.27",
+    "bonjour-service": "^1.4.4",
+    "libp2p": "3.3.9",
+    "swisd-core": "file:../12_swisd-core"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2"
+  }
+}
