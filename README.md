@@ -1,6 +1,6 @@
 # SwISD-Network
 
-Swarm brain library, carved out of the [SwISD testbed](https://github.com/hideosnes/SwISD): libp2p networking, CRDTs, peer trust, ownership, task routing, and the node admin API. Consumes [SwISD-Core](https://github.com/swisd-project/SwISD-Core) for config, crypto, delivery, models, observability, performance.
+Swarm brain library: libp2p networking, CRDTs, peer trust, ownership, task routing, and the node admin API. Consumes [SwISD-Core](https://github.com/swisd-project/SwISD-Core) for config, crypto, delivery, models, observability, performance.
 
 ## Modules
 
